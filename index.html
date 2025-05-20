@@ -1,0 +1,582 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>JEVELIN BURGERS</title>
+
+	<style type="text/css">
+		*
+		{
+			margin: 0px;
+			padding: 0px;
+		}
+
+	nav
+	{
+		width: 100%;
+		height: 200px;
+		align-items: center;
+		background-color: black;
+		text-align: center;
+	}
+	nav ul
+	{
+		display: flex;
+		justify-content: center;
+	}
+	nav ul li 
+	{
+		list-style: none;
+	}
+	nav ul li a 
+	{
+	    display: inline-block;
+		text-decoration: none;
+		padding: 30px 20px;
+		color: white;
+		font-family:  Arial ;
+		font-size: 20px;
+		font-weight: bold;
+	}
+	nav ul li a:hover
+	{
+		color:  black;
+		background-color: white;
+		transition: 1.5s;
+	}
+
+	.home 
+	{
+		width: 100%;
+		height: 600px;
+		background-color: black;
+		align-items: center;
+		text-align: center;
+	}
+	.home h1 
+	{
+		color: #FE3939;
+		font-family: arial;
+		font-weight: bold;
+		font-size: 50px;
+	}
+
+	.about 
+	{
+		display: flex;
+		width: 100%;
+		height: 1000px;
+		align-items: center;
+		background-color: white;
+		justify-content: space-evenly;
+	}
+	.about h1 
+	{
+		color: black;
+		font-weight: bold;
+		font-family: Arial;
+		font-size: 80px;
+	}
+	.about h2 
+	{
+		color: black;
+		font-family: Arial;
+		font-size: 30px;
+	}
+	.about h3 
+	{
+		color: black;
+		font-weight: bold;
+		font-family: Arial;
+		font-size: 20px;
+	}
+
+	.menu-1
+	{
+		display: flex;
+		width: 100%;
+		height: 800px;
+		align-items: center;
+		justify-content: space-evenly;
+		background-color: black;
+	}
+	.menu-1 h4
+	{
+		background-color: #FE3939;
+		font-family: Arial;
+		font-size: 20px;
+		color: white;
+		width: 100px;
+		height: 20px;
+		text-align: center;
+		border-radius: 20px;
+	}
+	.menu-1 h1
+	{
+		color: white;
+		font-family: Arial;
+		font-weight: bold;
+		font-size: 50px;
+	}
+	.menu-1 h3
+	{
+		color: white;
+		font-family: Arial;
+		font-size: 30px;
+	}
+	.menu-1 button
+	{
+		font-family: Arial;
+		font-weight: bold;
+		font-size: 25px;
+		color: white;
+		background-color: black;
+		border-radius: 20px;
+		border-color: white;
+		height: 50px;
+		width: 200px;
+	}
+	.menu-1 button:hover
+	{
+		background-color: #FE3939;
+		transition-duration: 1.5s;
+	}
+
+	.menu-2
+	{
+		display: flex;
+		width: 100%;
+		height: 800px;
+		align-items: center;
+		justify-content: space-evenly;
+		background-color: black;
+	}
+	.menu-2 h4
+	{
+		background-color: #FE3939;
+		font-family: Arial;
+		font-size: 20px;
+		color: white;
+		width: 100px;
+		height: 20px;
+		text-align: center;
+		border-radius: 20px;
+	}
+	.menu-2 h1
+	{
+		color: white;
+		font-family: Arial;
+		font-weight: bold;
+		font-size: 50px;
+	}
+	.menu-2 h3
+	{
+		color: white;
+		font-family: Arial;
+		font-size: 30px;
+	}
+	.menu-2 button
+	{
+		font-family: Arial;
+		font-weight: bold;
+		font-size: 25px;
+		color: white;
+		background-color: black;
+		border-radius: 20px;
+		border-color: white;
+		height: 50px;
+		width: 200px;
+	}
+	.menu-2 button:hover
+	{
+		background-color: #FE3939;
+		transition-duration: 1.5s;
+	}
+
+	.menu-3 
+	{
+		width: 100%;
+		height: 800px;
+		align-items: center;
+		justify-content:space-evenly;
+		background-color: white;
+	}
+	.menu-3 h1
+	{
+		font-family: Arial;
+		font-weight: bold;
+		font-size: 50px;
+		color: black;
+	}
+	.burgers
+	{
+		display: flex;
+		justify-content: space-evenly;
+		align-items: center;
+	}
+	.burgers img
+	{
+		width: 100%;
+		height: 100%;
+	}
+	.burgers h1
+	{
+		font-family: Arial;
+		font-weight: bold;
+		font-size: 30px;
+		color: black;
+	}
+	.burgers h3 
+	{
+		font-family: Arial;
+		font-size: 20px;
+		color: black;
+	}
+	.burgers h2
+	{
+		font-family: Arial;
+		font-weight: bold;
+		font-size: 25px;
+		color: #FE3939;
+	}
+
+	.menu-4
+	{
+		width: 100%;
+		height: 800px;
+		align-items: center;
+		justify-content:space-evenly;
+		background-color: white;
+	}
+	.menu-4 h1
+	{
+		font-family: Arial;
+		font-weight: bold;
+		font-size: 50px;
+		color: black;
+	}
+	.desert
+	{
+		display: flex;
+		justify-content: space-evenly;
+		align-items: center;
+	}
+	.desert img
+	{
+		width: 100%;
+		height: 100%;
+	}
+	.desert h1
+	{
+		font-family: Arial;
+		font-weight: bold;
+		font-size: 30px;
+		color: black;
+	}
+	.desert h3 
+	{
+		font-family: Arial;
+		font-size: 20px;
+		color: black;
+	}
+	.desert h2
+	{
+		font-family: Arial;
+		font-weight: bold;
+		font-size: 25px;
+		color: #FE3939;
+	}
+	.review
+	{
+		display: flex;
+		width: 100%;
+		height: 1200px;
+		align-items: center;
+		justify-content:space-evenly;
+		background-color: white;
+	}
+	.review h5
+	{
+		color: white;
+		background-color: black;
+		font-family: Arial;
+		font-size: 15px;
+		border-radius: 5px;
+		height: 20px;
+		width: 100px;
+		text-align: center;
+		justify-content: center;
+	}
+	.review h1
+	{
+		font-family: Arial;
+		font-weight: bold;
+		font-size: 70px;
+		color: black;
+	}
+	.review h2
+	{
+		font-family: Arial;
+		font-weight: bold;
+		font-size: 70px;
+		color: #FE3939;
+	}
+	.review h3
+	{
+		font-family: Arial;
+		font-size: 20px;
+		color: black;
+	}
+	.review h4
+	{
+		font-family: Arial;
+		font-size: 25px;
+		color: black;
+		font-weight: bold;
+	}
+
+	.gallery
+	{
+		display: flex;
+		justify-content: space-evenly;
+		align-items: center;
+		width: 100%;
+		height: 800px;
+	}
+
+	.contact
+	{
+		display: flex;
+		width: 100%;
+		height: 600px;
+		align-items: center;
+		justify-content:space-evenly;
+		background-color: white;
+	}
+	.company h1
+	{
+		font-family: Arial;
+		font-size: 30px;
+		font-weight: bold;
+	}
+	.company h3
+	{
+	    font-family: Arial;
+		font-size: 20px;	
+	}
+	.contact-us h1
+	{
+		font-family: Arial;
+		font-size: 30px;
+		font-weight: bold;
+	}
+	.contact-us h3
+	{
+		font-family: Arial;
+		font-size: 20px;
+	}
+	.subscribe h1
+	{
+		font-family: Arial;
+		font-size: 30px;
+		font-weight: bold;
+	}
+	.subscribe h4
+	{
+		font-family: Arial;
+		font-size: 20px;
+	}
+	.subscribe input 
+	{
+		border-radius: 20px;
+		border-color: white;
+		height: 50px;
+		width: 300px;
+		background-color: white;
+	}
+	input [placeholder]
+	{
+		font-family: arial;
+		font-size: 25px;
+		align-items: center;
+	}
+	.subscribe button
+	{
+		font-family: Arial;
+		font-weight: bold;
+		font-size: 25px;
+		color: white;
+		background-color: #FE3939;
+		border-radius: 20px;
+		border-color: white;
+		height: 50px;
+		width: 300px;
+	}
+	.subscribe button:hover
+	{
+		background-color: black;
+		transition-duration: 1.5s;
+	}
+	
+	</style>
+
+</head>
+<body>
+
+	<nav>
+		
+		<img src="weblogo.png" alt="logo">
+
+		<ul>
+			<li><a href="#">HOME</a></li>
+			<li><a href="#">ABOUT</a></li>
+			<li><a href="#">OFFERS</a></li>
+			<li><a href="#">MENU</a></li>
+			<li><a href="#">CONTACT</a></li>
+		</ul>
+
+	</nav>
+
+	<div class="home">
+		
+		<h1> CRISPY  TENDER </h1>
+		<br>
+		<h1> BURGER </h1>
+		<img src="webimg1.png">
+
+	</div>
+
+	<div class="about">
+		
+		<img src="webimg2.jpg">
+		<div>
+			<h1>Delivering best <br> ingredients for our <br> trusty food lovers</h1>
+			<br>
+			<h3>Lorem ipsum dolor sit amet, consectetur adipiscing elit, <br> sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. <br> Quis ipsum suspendisse ultrices gravida.</h3>
+			<br>
+			<h4>Jevelin Theme Burger Shop Demo  <br>– Just another Jevelin WordPress Theme site.</h4>
+		</div>
+
+	</div>
+
+	<div class="menu-1">
+		
+		<img src="webimg3.png">
+		<div>
+			<h4> -25% OFF </h4><br>
+			<h1> Enjoy our specially <br> prepared burgers <br> for you </h1><br><br><br><br>
+			<h3> Dont miss out on our daily special offers </h3><br><br><br>
+			<button> SEE MENU </button>
+		</div>
+
+	</div>
+
+	<div class="menu-2">
+		<div>
+			<h4> -15% OFF </h4><br>
+			<h1> New, amazing <br> sandwich offers <br> every day </h1><br><br><br><br>
+			<h3> Just add some of our juicy side dishes </h3><br><br><br>
+			<button> SEE MORE </button>
+		</div>
+		<img src="webimg4.png">
+	</div>
+
+	<div class="menu-3">
+		<h1> Trending Burgers </h1><br><br><br>
+		<div class="burgers">
+			<div>
+				<img src="webimg5.jpg"><br>
+				<h1> Juicy Burger </h1><br>
+				<h3>Lorem ipsum dolor sit amet, <br> consectetur adipiscing elit, <br> sed do eiusmod tempor</h3><br>
+				<h2> $8 </h2>
+			</div>
+			<div>
+				<img src="webimg6.jpg"><br>
+				<h1> Juicy Burger </h1><br>
+				<h3>Lorem ipsum dolor sit amet, <br> consectetur adipiscing elit, <br> sed do eiusmod tempor</h3><br>
+				<h2> $8 </h2>
+			</div>
+			<div>
+				<img src="webimg7.jpg"><br>
+				<h1> Juicy Burger </h1><br>
+				<h3>Lorem ipsum dolor sit amet, <br> consectetur adipiscing elit, <br> sed do eiusmod tempor</h3><br>
+				<h2> $8 </h2>
+			</div>
+			<div>
+				<img src="webimg8.jpg"><br>
+				<h1> Juicy Burger </h1><br>
+				<h3>Lorem ipsum dolor sit amet, <br> consectetur adipiscing elit, <br> sed do eiusmod tempor</h3><br>
+				<h2> $8 </h2>
+			</div>
+		</div>
+	</div>
+
+	<div class="menu-4">
+		<h1> Desert Menu </h1><br><br><br>
+		<div class="desert">
+			<div>
+				<img src="webimg9.jpg"><br>
+				<h1> Strawberry Mix </h1><br>
+				<h3>Lorem ipsum dolor sit amet, <br> consectetur adipiscing elit, <br> sed do eiusmod tempor</h3><br>
+				<h2> $8 </h2>
+			</div>
+			<div>
+				<img src="webimg10.jpg"><br>
+				<h1> Chocolate Mix </h1><br>
+				<h3>Lorem ipsum dolor sit amet, <br> consectetur adipiscing elit, <br> sed do eiusmod tempor</h3><br>
+				<h2> $8 </h2>
+			</div>
+			<div>
+				<img src="webimg11.jpg"><br>
+				<h1> Apple Pie </h1><br>
+				<h3>Lorem ipsum dolor sit amet, <br> consectetur adipiscing elit, <br> sed do eiusmod tempor</h3><br>
+				<h2> $8 </h2>
+			</div>
+			<div>
+				<img src="webimg12.jpg"><br>
+				<h1> Sunday Waffle </h1><br>
+				<h3>Lorem ipsum dolor sit amet, <br> consectetur adipiscing elit, <br> sed do eiusmod tempor</h3><br>
+				<h2> $8 </h2>
+			</div>
+		</div>
+	</div>
+
+	<div class="review">
+		<img src="webimg13.jpg">
+		<div>
+			<h5> Testimonial </h5><br><br>
+			<h1> What our clinets <br> have to say</h1><br><br><br>
+			<h2> 99 </h2>
+			<h3>lorem ipsum dolor sit amet, consectetur adipiscing elit, <br> sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. <br> Quis ipsum suspendisse ultrices gravida.</h3><br><br><br>
+			<h4> -John Doe </h4>
+		</div>
+	</div>
+
+	<div class="gallery">
+		<div> <img src="webimg15.jpg"> </div>
+		<div> <img src="webimg17.jpg"> </div>
+		<div> <img src="webimg16.jpg"> </div>
+	</div>
+
+	<div class="contact">
+		
+		<div class="company">
+			<h1> Jevelin </h1><br>
+			<h3> Lorem ipsum dolor sit <br> amet, consectetur <br> adipiscing elit, sed do </h3>
+		</div>
+		<div class="contact-us">
+			<h1> Contact us </h1><br>
+			<h3> Lorem ipsum dolor sit <br> amet, consectetur <br> adipiscing elit, sed do </h3>
+		</div>
+		<div class="subscribe">
+			<h1> Subscribe </h1><br>
+			<input type="Text" placeholder="Enter your email here..."><br><br>
+			<button> SUBSCRIBE </button><br>
+			<h4>       Get the latest special offers </h4>
+		</div>
+
+	</div>
+
+</body>
+</html>
